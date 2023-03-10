@@ -19,12 +19,21 @@ public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    private Long taskName;
+    private Long id;
+    private String taskName;
     private int timeToCompleteInHours;
     private double salary;
 
     @ManyToMany (fetch = FetchType.EAGER)
     private List<Employee> employeeList;
 
+
+    public Task(String taskName, int timeToCompleteInHours, double salary, List<Employee> employeeList) {
+        this.taskName = taskName;
+        this.timeToCompleteInHours = timeToCompleteInHours;
+        this.salary = salary;
+        this.employeeList = employeeList;
+    }
 }
+
+

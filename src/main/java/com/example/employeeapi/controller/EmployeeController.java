@@ -1,7 +1,6 @@
 package com.example.employeeapi.controller;
 
 
-import com.example.employeeapi.dto.EmployeeDto;
 import com.example.employeeapi.model.Employee;
 import com.example.employeeapi.repository.EmployeeRepository;
 import org.springframework.web.bind.annotation.GetMapping;
